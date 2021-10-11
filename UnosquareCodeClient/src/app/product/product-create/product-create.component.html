@@ -1,0 +1,49 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center">
+    <mat-card fxFlex="500px" fxFlex.xs="100%">
+        <mat-card-title *ngIf="isAddMode">Create a product</mat-card-title>
+        <mat-card-title *ngIf="!isAddMode">Edit a product</mat-card-title>
+        
+        <form [formGroup]="productForm" autocomplete="off" novalidate (ngSubmit)="onSubmit(productForm.value)" fxLayout="column wrap"
+            fxLayoutAlign="center center" fxLayoutGap="10px">
+            <mat-card-content>
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Product's name" formControlName="name" id="name">
+                    <mat-hint>Not more then 50 characters long.</mat-hint>
+                    <mat-error *ngIf="hasError('name', 'required')">Name is required</mat-error>
+                    <mat-error *ngIf="hasError('name', 'maxlength')">You have more than 50 characters</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Price" formControlName="price" id="price">
+                    <mat-hint>1$ to $1000.</mat-hint>
+                    <mat-error *ngIf="hasError('price', 'required')">Price is required</mat-error>
+                    <mat-error *ngIf="hasError('price', 'pattern')">Only numbers</mat-error>
+                    <mat-error *ngIf="hasError('price', 'min')">Min price is 1</mat-error>
+                    <mat-error *ngIf="hasError('price', 'max')">Max price is 1000</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Company" formControlName="company">
+                    <mat-hint>Not more then 50 characters long.</mat-hint>
+                    <mat-error *ngIf="hasError('company', 'maxlength')">You have more than 50 characters</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="number" placeholder="Maximum Age" formControlName="maximunAge">
+                    <mat-error *ngIf="hasError('maximunAge', 'min')">Min Age is 0</mat-error>
+                    <mat-error *ngIf="hasError('maximunAge', 'max')">Max Age is 100</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Description" formControlName="description">
+                    <mat-hint>Product description.</mat-hint>
+                    <mat-error *ngIf="hasError('description', 'maxlength')">You have more than 100 characters</mat-error>
+                </mat-form-field>
+            </mat-card-content>
+
+            <mat-card-actions>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" [disabled]="!productForm.valid">Create</button>
+                    <button type="button" mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+                  </mat-card-actions>
+            </mat-card-actions>
+
+        </form>
+      </mat-card>
+  </section>

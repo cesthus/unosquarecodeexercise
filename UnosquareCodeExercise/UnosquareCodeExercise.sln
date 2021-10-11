@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnosquareCodeExerciseAPI", "UnosquareCodeExerciseAPI.csproj", "{94663AFB-05B6-4560-AE48-34751C8A3166}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnosquareCodeExerciseAPI.Test", "..\UnosquareCodeExerciseAPI.Test\UnosquareCodeExerciseAPI.Test.csproj", "{C2BC9B47-0692-410B-9F16-7BC8613DF08D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94663AFB-05B6-4560-AE48-34751C8A3166}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94663AFB-05B6-4560-AE48-34751C8A3166}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94663AFB-05B6-4560-AE48-34751C8A3166}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94663AFB-05B6-4560-AE48-34751C8A3166}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2BC9B47-0692-410B-9F16-7BC8613DF08D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2BC9B47-0692-410B-9F16-7BC8613DF08D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2BC9B47-0692-410B-9F16-7BC8613DF08D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2BC9B47-0692-410B-9F16-7BC8613DF08D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8BFFFF2B-9F67-4202-8E44-C8214554D6E7}
+	EndGlobalSection
+EndGlobal

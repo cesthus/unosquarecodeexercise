@@ -1,0 +1,22 @@
+<div fxLayout="row wrap" fxLayoutAlign="center center" class="layout-wrapper"> 
+  <div fxFlex="80%" fxFlex.lt-md="100%" class="flex-wrapper"> 
+    <mat-sidenav-container>
+      
+      <mat-sidenav-content>
+        <mat-toolbar color="warn">
+          <div fxHide.gt-xs>
+              <button mat-icon-button>
+                  <mat-icon>menu</mat-icon>
+              </button>
+          </div>
+          <div>
+              <a routerLink="/product/products">Products</a>
+          </div>
+        </mat-toolbar>
+        <main>
+          <router-outlet></router-outlet>
+        </main>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div> 
+</div>

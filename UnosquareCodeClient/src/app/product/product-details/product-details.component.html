@@ -1,0 +1,35 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center">
+    <mat-card fxFlex="500px" fxFlex.xs="100%">
+        <mat-card-title fxLayoutAlign="center">Product</mat-card-title>
+        <mat-card-content>
+          <div fxLayout="column wrap"fxLayoutGap="15px">
+            <div fxLayout="row wrap" fxFlex>
+              <div fxFlex><strong>Name:</strong></div>
+              <div fxFlex>{{product?.name}}</div>
+            </div>
+
+            <div fxLayout="row wrap" fxFlex>
+              <div fxFlex><strong>Price:</strong></div>
+              <div fxFlex>{{product?.price | currency}}</div>
+            </div>
+
+            <div fxLayout="row wrap" fxFlex>
+                <div fxFlex><strong>Company:</strong></div>
+                <div fxFlex>{{product?.company}}</div>
+            </div>
+
+            <div fxLayout="row wrap" fxFlex *ngIf='product?.ageRestriccion'>
+                <div fxFlex><strong>Maximum Age:</strong></div>
+                <div fxFlex>{{product?.ageRestriccion}}</div>
+            </div>
+      
+            <div fxLayout="row wrap" fxFlex *ngIf='product?.description'>
+              <div fxFlex><strong>Description:</strong></div>
+              <div fxFlex>{{product?.description}}</div>
+            </div>
+            
+          </div>
+        </mat-card-content>
+        
+      </mat-card>
+</section>
