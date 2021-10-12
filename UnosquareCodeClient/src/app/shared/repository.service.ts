@@ -30,7 +30,6 @@ export class RepositoryService {
   }
  
   public update = (route: string, body: any) => {
-    console.log(body);
     return this.http.put(this.createCompleteRoute(route, environment.urlAddress), body, this.generateHeaders());
   }
  

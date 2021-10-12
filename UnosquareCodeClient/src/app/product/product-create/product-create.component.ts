@@ -19,6 +19,7 @@ export class ProductCreateComponent implements OnInit {
   private dialogConfig!: any;
   public id!: number;
   public isAddMode!: boolean;
+  public btnSendText!: string;
 
   constructor(private location: Location, private repository: RepositoryService, private dialog: MatDialog, private router: Router, private activeRoute: ActivatedRoute) { }
 
@@ -42,12 +43,18 @@ export class ProductCreateComponent implements OnInit {
     }
 
     if (!this.isAddMode) {
+      this.btnSendText = "Update";
       let apiUrl = 'api/product/'+this.id;
       this.repository.getData(apiUrl)
           .subscribe(
             x => this.productForm.patchValue(x)
           );
     }
+
+    if(this.isAddMode){
+      this.btnSendText = "Create";
+    }
+
   }
 
   public hasError = (controlName: string, errorName: string) =>{
@@ -93,17 +100,17 @@ export class ProductCreateComponent implements OnInit {
   }
 
   private updateProduct = (productFormValue: any) => {
-    let product: ProductForUpdate = {
+    let product: Product = {
       id: this.id,
-      Name: productFormValue.name,
+      name: productFormValue.name,
       description: productFormValue.description,
       price: productFormValue.price,
-      Company: productFormValue.company,
+      company: productFormValue.company,
       ageRestriccion: productFormValue.maximunAge == '' ? null : productFormValue.maximunAge 
     };
     
-    let apiUrl = 'api/product/update/'+this.id;
-    this.repository.create(apiUrl, product)
+    let apiUrl = 'api/product/'+this.id;
+    this.repository.update(apiUrl, product)
       .subscribe(res => {
         let dialogRef = this.dialog.open(SuccessDialogComponent, this.dialogConfig);
         dialogRef.afterClosed().subscribe(result => {

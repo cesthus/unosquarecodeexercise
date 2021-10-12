@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnosquareCodeExerciseAPI", "UnosquareCodeExerciseAPI.csproj", "{94663AFB-05B6-4560-AE48-34751C8A3166}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnosquareCodeExercise.API", "UnosquareCodeExercise.API.csproj", "{94663AFB-05B6-4560-AE48-34751C8A3166}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnosquareCodeExerciseAPI.Test", "..\UnosquareCodeExerciseAPI.Test\UnosquareCodeExerciseAPI.Test.csproj", "{C2BC9B47-0692-410B-9F16-7BC8613DF08D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnosquareCodeExercise.API.Test", "..\UnosquareCodeExercise.API.Test\UnosquareCodeExercise.API.Test.csproj", "{F84DFD59-67FA-47D8-BADE-751984BF4E2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{94663AFB-05B6-4560-AE48-34751C8A3166}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94663AFB-05B6-4560-AE48-34751C8A3166}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94663AFB-05B6-4560-AE48-34751C8A3166}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C2BC9B47-0692-410B-9F16-7BC8613DF08D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C2BC9B47-0692-410B-9F16-7BC8613DF08D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C2BC9B47-0692-410B-9F16-7BC8613DF08D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C2BC9B47-0692-410B-9F16-7BC8613DF08D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F84DFD59-67FA-47D8-BADE-751984BF4E2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F84DFD59-67FA-47D8-BADE-751984BF4E2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F84DFD59-67FA-47D8-BADE-751984BF4E2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F84DFD59-67FA-47D8-BADE-751984BF4E2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

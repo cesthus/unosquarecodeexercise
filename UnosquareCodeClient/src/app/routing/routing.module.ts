@@ -6,7 +6,7 @@ import { AppComponent } from '../app.component';
 const routes: Routes = [
   { path: 'app', component: AppComponent},
   { path: 'product', loadChildren: () => import('../product/product.module').then(m => m.ProductModule) },
-  { path: '', redirectTo: '/app', pathMatch: 'full' }
+  { path: '', redirectTo: '/product/products', pathMatch: 'full' }
 ];
 
 @NgModule({
